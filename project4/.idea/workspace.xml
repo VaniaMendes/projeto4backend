@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="e170a628-05be-4b72-b134-24716f0fd2d1" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/project_backend/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project_backend/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project_backend/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project_backend/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project_backend/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project_backend/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project_backend/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project_backend/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project_backend/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project_backend/out/artifacts/project_backend_war_exploded/META-INF/MANIFEST.MF" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project_backend/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project_backend/src/main/java/aor/paj/bean/CategoryBean.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project_backend/src/main/java/aor/paj/bean/StartupBean.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project_backend/src/main/java/aor/paj/bean/TaskBean.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project_backend/src/main/java/aor/paj/bean/UserBean.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project_backend/src/main/java/aor/paj/dao/AbstractDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project_backend/src/main/java/aor/paj/dao/CategoryDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project_backend/src/main/java/aor/paj/dao/TaskDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project_backend/src/main/java/aor/paj/dao/UserDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project_backend/src/main/java/aor/paj/dto/Category.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project_backend/src/main/java/aor/paj/dto/LoginDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project_backend/src/main/java/aor/paj/dto/Task.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project_backend/src/main/java/aor/paj/dto/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project_backend/src/main/java/aor/paj/dto/UserDetails.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project_backend/src/main/java/aor/paj/entity/CategoryEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project_backend/src/main/java/aor/paj/entity/TaskEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project_backend/src/main/java/aor/paj/entity/UserEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project_backend/src/main/java/aor/paj/pojo/UserPojo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project_backend/src/main/java/aor/paj/service/ApplicationConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project_backend/src/main/java/aor/paj/service/CategoryService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project_backend/src/main/java/aor/paj/service/TaskService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project_backend/src/main/java/aor/paj/service/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project_backend/src/main/java/aor/paj/utils/EncryptHelper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project_backend/src/main/java/aor/paj/utils/RegisterHelper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project_backend/src/main/resources/META-INF/beans.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project_backend/src/main/resources/META-INF/persistence.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project_backend/src/main/webapp/WEB-INF/jboss-web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project_backend/src/test/java/aor/paj/bean/CategoryBeanTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project_backend/src/test/java/aor/paj/bean/TaskBeanTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project_backend/src/test/java/aor/paj/bean/UserBeanTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project_backend/src/test/java/aor/paj/utils/EncryptHelperTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project_backend/src/test/java/aor/paj/utils/RegisterHelperTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/project4.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "customColor": "",
+  "associatedIndex": 6
+}]]></component>
+  <component name="ProjectId" id="2dHw3tdNOXHxuqnvqrjzdgjSLrN" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration name="JBoss/WildFly 30.0.1.Final" type="JBossConfiguration" factoryName="Local" APPLICATION_SERVER_NAME="JBoss/WildFly 30.0.1.Final" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <artifact name="project_backend:war exploded">
+          <settings />
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="SERVER" />
+        <option name="BINDING_SET_NAME" value="" />
+        <option name="DOMAIN" value="false" />
+        <option name="SERVER_GROUP" value="main-server-group" />
+        <option name="USERNAME" value="" />
+        <option name="CREDENTIAL_ALIAS" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="JBoss" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="53220" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="project_backend:war exploded" />
+        </option>
+      </method>
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-21.0.1-openjdk-21.0.1-f644763e9732-f98dd351" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e170a628-05be-4b72-b134-24716f0fd2d1" name="Changes" comment="" />
+      <created>1709678118086</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1709678118086</updated>
+      <workItem from="1709678119740" duration="68000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
