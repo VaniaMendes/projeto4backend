@@ -375,22 +375,17 @@ public class UserBean implements Serializable {
 
 
     public boolean isPhoneNumberValid(String phone) {
-        boolean status = true;
-        int i = 0;
+        // Remove espaços em branco e caracteres não numéricos
+        String cleanPhone = phone.replaceAll("[^0-9]", "");
 
-        while (status && i < phone.length() - 1) {
-            if (phone.length() == 9) {
-                for (; i < phone.length(); i++) {
-                    if (!Character.isDigit(phone.charAt(i))) {
-                        status = false;
-                    }
-                }
-            } else {
-                status = false;
-            }
+        // Verifica se o comprimento do número de telefone é válido
+        if (cleanPhone.length() == 9) {
+            return true;
+        } else {
+            return false;
         }
-        return status;
     }
+
 
     public boolean emailAvailable (String email){
         UserEntity userEntity = userDao.findUserByEmail(email);
