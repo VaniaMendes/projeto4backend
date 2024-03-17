@@ -16,6 +16,7 @@ import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
 
 import java.io.StringReader;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -38,6 +39,7 @@ public class TaskService {
     @Produces(MediaType.APPLICATION_JSON)
     @Transactional
     public Response addTask(@HeaderParam("token") String token, @HeaderParam("categoryId") String categoryId, Task task) {
+        LocalDate currentDate = LocalDate.now();
 
         Response response;
 
@@ -52,6 +54,9 @@ public class TaskService {
 
         } else if (task.getInitialDate().isAfter(task.getEndDate())) {
             response = Response.status(422).entity("Initial date cannot be after the end date").build();
+
+        }else if(task.getInitialDate().isBefore(currentDate)){
+            response = Response.status(422).entity("Initial date cannot be before the current date").build();
 
         } else if (task.getPriority() != 100 && task.getPriority() != 200 && task.getPriority() != 300) {
             response = Response.status(422).entity("Priority can only be 100, 200 or 300").build();

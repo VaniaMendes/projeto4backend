@@ -123,6 +123,7 @@ public class UserBean implements Serializable {
 
     }
 
+
     /**
      *
      * @param token
@@ -226,6 +227,8 @@ public class UserBean implements Serializable {
         u = convertUserEntityToDto(userEntity);
         return u;
     }
+
+   
     public User getUserByUsername(String username) {
         UserEntity userEntity = userDao.findUserByUsername(username);
         User u = null;

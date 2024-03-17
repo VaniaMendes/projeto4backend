@@ -93,6 +93,7 @@ public class UserService {
             return Response.status(Response.Status.BAD_REQUEST).build();
         }
     }
+
     @GET
     @Path("/user")
     @Produces(MediaType.APPLICATION_JSON)
@@ -106,7 +107,7 @@ public class UserService {
                 User userFind = userBean.getUserByUsername(username);
                 return Response.ok(userFind).build();
             } else {
-            return Response.status(Response.Status.NOT_FOUND).build();
+                return Response.status(Response.Status.NOT_FOUND).build();
             }
 
         } else {
@@ -144,11 +145,11 @@ public class UserService {
             } else {
                 return Response.status(Response.Status.NOT_FOUND).entity("No users found").build();
             }
-        }else{
+        } else {
             return Response.status(Response.Status.UNAUTHORIZED).entity("Unauthorized access").build();
         }
 
-        }
+    }
 
     @GET
     @Path("/inactiveUsers")
@@ -165,12 +166,11 @@ public class UserService {
             } else {
                 return Response.status(Response.Status.NOT_FOUND).entity("No users found").build();
             }
-        }else{
+        } else {
             return Response.status(Response.Status.UNAUTHORIZED).entity("Unauthorized access").build();
         }
 
     }
-
 
 
     @PUT
@@ -252,9 +252,9 @@ public class UserService {
             if (updatedUser.getEmail() != null) {
                 if (!userBean.isEmailValid(updatedUser.getEmail())) {
                     return Response.status(422).entity("Invalid email").build();
-                } else if(!userBean.emailAvailable(updatedUser.getEmail())) {
+                } else if (!userBean.emailAvailable(updatedUser.getEmail())) {
                     return Response.status(422).entity("Email allready exists").build();
-                }else {
+                } else {
                     user.setEmail(updatedUser.getEmail());
                 }
             }
@@ -279,7 +279,7 @@ public class UserService {
                 }
             }
 
-            if(updatedUser.getPassword() != null){
+            if (updatedUser.getPassword() != null) {
                 String plainPassword = updatedUser.getPassword();
                 String hashedPassword = encryptHelper.encryptPassword(plainPassword);
                 user.setPassword(hashedPassword);
@@ -292,8 +292,8 @@ public class UserService {
             } else {
                 return Response.status(Response.Status.INTERNAL_SERVER_ERROR).entity("Failed to update user").build();
             }
-        }else{
-        return Response.status(401).entity("Invalid credentials").build();
+        } else {
+            return Response.status(401).entity("Invalid credentials").build();
         }
     }
 
@@ -307,12 +307,12 @@ public class UserService {
 
 
         if (userRequest != null && (userRequest.getTypeOfUser()).equals("product_owner")) {
-            if (updatedUser.getEmail() != null ) {
+            if (updatedUser.getEmail() != null) {
                 if (!userBean.isEmailValid(updatedUser.getEmail())) {
                     return Response.status(422).entity("Invalid email").build();
-                } else if(!userBean.emailAvailable(updatedUser.getEmail())) {
+                } else if (!userBean.emailAvailable(updatedUser.getEmail())) {
                     return Response.status(422).entity("Email allready exists").build();
-                }else {
+                } else {
                     beModified.setEmail(updatedUser.getEmail());
                 }
             }
@@ -337,7 +337,7 @@ public class UserService {
                 }
             }
 
-            if(updatedUser.getTypeOfUser() != null){
+            if (updatedUser.getTypeOfUser() != null) {
                 beModified.setTypeOfUser(updatedUser.getTypeOfUser());
             }
 
@@ -347,7 +347,7 @@ public class UserService {
             } else {
                 return Response.status(406).entity("Failed to update user").build();
             }
-        }else{
+        } else {
             return Response.status(401).entity("Invalid credentials").build();
         }
     }
@@ -360,7 +360,7 @@ public class UserService {
         User userRequest = userBean.getUserByToken(token);
         Response response;
 
-        if(userRequest!= null && userRequest.getTypeOfUser().equals("product_owner")) {
+        if (userRequest != null && userRequest.getTypeOfUser().equals("product_owner")) {
 
 
             boolean isFieldEmpty = userBean.isAnyFieldEmpty(user);
@@ -385,14 +385,14 @@ public class UserService {
             } else if (!isPhoneValid) {
                 response = Response.status(422).entity("Invalid phone number").build();
 
-            } else if (userBean.registerByPO(token,user)) {
+            } else if (userBean.registerByPO(token, user)) {
                 response = Response.status(Response.Status.CREATED).entity("User registered successfully").build();
 
             } else {
                 response = Response.status(Response.Status.BAD_REQUEST).entity("Something went wrong").build();
 
             }
-        }else{
+        } else {
             response = Response.status(Response.Status.UNAUTHORIZED).entity("You don´t have permission").build();
         }
 
@@ -432,10 +432,10 @@ public class UserService {
     @POST
     @Path("/logout")
     @Produces(MediaType.APPLICATION_JSON)
-    public Response logoutValidate(@HeaderParam("token") String token){
-        User userRequest=userBean.getUserByToken(token);
+    public Response logoutValidate(@HeaderParam("token") String token) {
+        User userRequest = userBean.getUserByToken(token);
 
-        if (userRequest==null){
+        if (userRequest == null) {
             return Response.status(401).entity("Failed").build();
         }
 
@@ -447,9 +447,9 @@ public class UserService {
     @GET
     @Path("/{username}")
     @Produces(MediaType.APPLICATION_JSON)
-    public Response getUsern(@PathParam("username")String username){
-        UserDetails userRequested=userBean.getUserDetails(username);
-        if (userRequested==null) return Response.status(400).entity("Failed").build();
+    public Response getUsern(@PathParam("username") String username) {
+        UserDetails userRequested = userBean.getUserDetails(username);
+        if (userRequested == null) return Response.status(400).entity("Failed").build();
         return Response.status(200).entity(userRequested).build();
     }
 
