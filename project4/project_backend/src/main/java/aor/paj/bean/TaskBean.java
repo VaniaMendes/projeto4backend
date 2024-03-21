@@ -90,7 +90,6 @@ public class TaskBean {
 
                         taskToUpdate.setTitle(task.getTitle());
                         taskToUpdate.setDescription(task.getDescription());
-                        taskToUpdate.setState(task.getState());
                         taskToUpdate.setPriority(task.getPriority());
                         taskToUpdate.setInitialDate(task.getInitialDate());
                         taskToUpdate.setEndDate(task.getEndDate());

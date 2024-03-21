@@ -11,8 +11,7 @@
   <component name="ChangeListManager">
     <list default="true" id="e170a628-05be-4b72-b134-24716f0fd2d1" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project_backend/src/main/java/aor/paj/bean/UserBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/project_backend/src/main/java/aor/paj/bean/UserBean.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project_backend/src/main/java/aor/paj/service/TaskService.java" beforeDir="false" afterPath="$PROJECT_DIR$/project_backend/src/main/java/aor/paj/service/TaskService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project_backend/src/main/java/aor/paj/bean/TaskBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/project_backend/src/main/java/aor/paj/bean/TaskBean.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project_backend/src/main/java/aor/paj/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/project_backend/src/main/java/aor/paj/service/UserService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -166,7 +165,14 @@
       <workItem from="1710495709861" duration="2633000" />
       <workItem from="1710512290891" duration="1220000" />
       <workItem from="1710577968590" duration="4696000" />
-      <workItem from="1710693428486" duration="2863000" />
+      <workItem from="1710693428486" duration="3453000" />
+      <workItem from="1710767048409" duration="2613000" />
+      <workItem from="1710776027838" duration="638000" />
+      <workItem from="1710787350661" duration="1759000" />
+      <workItem from="1710841002235" duration="3829000" />
+      <workItem from="1710883523430" duration="702000" />
+      <workItem from="1710929763155" duration="2358000" />
+      <workItem from="1711014489254" duration="8592000" />
     </task>
     <servers />
   </component>

@@ -361,8 +361,6 @@ public class UserService {
         Response response;
 
         if (userRequest != null && userRequest.getTypeOfUser().equals("product_owner")) {
-
-
             boolean isFieldEmpty = userBean.isAnyFieldEmpty(user);
             boolean isEmailValid = userBean.isEmailValid(user.getEmail());
             boolean isUsernameAvailable = userBean.isUsernameAvailable(user.getUsername());
@@ -377,7 +375,7 @@ public class UserService {
                 response = Response.status(422).entity("Invalid email").build();
 
             } else if (!isUsernameAvailable) {
-                response = Response.status(Response.Status.CONFLICT).entity("Username already in use").build(); //status code 409
+                response = Response.status(Response.Status.CONFLICT).entity("Username already in use").build();
 
             } else if (!isImageValid) {
                 response = Response.status(422).entity("Image URL invalid").build();
