@@ -347,5 +347,34 @@ public class TaskService {
         return response;
     }
 
+    @GET
+    @Path("/myTasks")
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response getMyTasks(@HeaderParam("token") String token){
+        Response response;
+
+        User user = userBean.getUserByToken(token);
+
+        ArrayList<Task> tasks = taskBean.getTasksByUsername(token);
+
+        if (userBean.getUserByToken(token) == null) {
+            response = Response.status(403).entity("Invalid token").build();
+
+        } else if (tasks != null) {
+            response = Response.status(200).entity(tasks).build();
+
+        } else {
+            response = Response.status(400).entity("This user has no tasks").build();
+        }
+        return response;
+    }
+
 }
+
+
+
+
+
+
+
 

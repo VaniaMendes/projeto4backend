@@ -12,7 +12,7 @@
     <list default="true" id="e170a628-05be-4b72-b134-24716f0fd2d1" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project_backend/src/main/java/aor/paj/bean/TaskBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/project_backend/src/main/java/aor/paj/bean/TaskBean.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project_backend/src/main/java/aor/paj/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/project_backend/src/main/java/aor/paj/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project_backend/src/main/java/aor/paj/service/TaskService.java" beforeDir="false" afterPath="$PROJECT_DIR$/project_backend/src/main/java/aor/paj/service/TaskService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -172,7 +172,11 @@
       <workItem from="1710841002235" duration="3829000" />
       <workItem from="1710883523430" duration="702000" />
       <workItem from="1710929763155" duration="2358000" />
-      <workItem from="1711014489254" duration="8592000" />
+      <workItem from="1711014489254" duration="10731000" />
+      <workItem from="1711055545217" duration="1191000" />
+      <workItem from="1711100216215" duration="3756000" />
+      <workItem from="1711120886516" duration="940000" />
+      <workItem from="1711193158995" duration="661000" />
     </task>
     <servers />
   </component>

@@ -392,21 +392,22 @@ public class TaskBean {
         }
 
 
-    public ArrayList<Task> getTasksByUsername(String token, String username) {
+    public ArrayList<Task> getTasksByUsername(String token) {
 
         UserEntity userEntity = userDao.findUserByToken(token);
-        UserEntity userToHaveTasksDeleted = userDao.findUserByUsername(username);
-        ArrayList<TaskEntity> tasksByUsernameEntities = taskDao.findTasksByUser(userToHaveTasksDeleted);
+        ArrayList<TaskEntity> tasksByUsernameEntities = taskDao.findTasksByUser(userEntity);
 
         ArrayList<Task> tasksByUsername = new ArrayList<>();
 
             if (userEntity != null) {
                 if (tasksByUsernameEntities != null) {
-                    if (userToHaveTasksDeleted != null) {
+
                         for (TaskEntity taskEntity : tasksByUsernameEntities) {
-                            Task task = convertTaskEntityToTask(taskEntity);
-                            tasksByUsername.add(task);
-                        }
+                            if(taskEntity.isActive()) {
+                                Task task = convertTaskEntityToTask(taskEntity);
+                                tasksByUsername.add(task);
+                            }
+
                     }
                 }
             }
