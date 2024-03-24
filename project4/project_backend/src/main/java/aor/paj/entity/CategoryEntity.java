@@ -9,7 +9,7 @@ import java.util.Set;
 @Entity
 @Table(name="category")
 @NamedQuery(name = "Category.findCategoryByTitle", query = "SELECT u FROM CategoryEntity u WHERE u.title = :title")
-@NamedQuery(name = "Category.findCategoryById", query = "SELECT u FROM CategoryEntity u WHERE u.idCategory = :idCategory")
+@NamedQuery(name = "Category.findCategoryById", query = "SELECT u FROM CategoryEntity u WHERE u.idCategory = :categoryId")
 @NamedQuery(name = "Category.findAllCategories", query = "SELECT u FROM CategoryEntity u")
 @NamedQuery(name = "Category.findCategoryByUser", query = "SELECT u FROM CategoryEntity u WHERE u.owner = :owner")
 

@@ -12,6 +12,8 @@ import jakarta.ws.rs.*;
 import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
 
+
+
 @Path("/categories")
 public class CategoryService {
 
@@ -149,4 +151,29 @@ public class CategoryService {
         return response;
     }
 
+    @GET
+    @Path("/category/{title}")
+    @Produces(MediaType.APPLICATION_JSON)
+    @Consumes(MediaType.APPLICATION_JSON)
+    public Response getCategoryIDByTitle(@HeaderParam("token") String token, @PathParam("title") String title) {
+        Response response;
+
+        if (userBean.getUserByToken(token) == null) {
+            response = Response.status(403).entity("Invalid token").build();
+
+
+        } else if (categoryBean.getCategoryIdByTitle(token, title) == null) {
+            response = Response.status(400).entity("Failed to retrieve category").build();
+
+        } else {
+            response = Response.status(200).entity(categoryBean.getCategoryIdByTitle(token, title)).build();
+        }
+
+        return response;
+    }
+
 }
+
+
+
+

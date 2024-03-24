@@ -18,7 +18,7 @@ public class CategoryDao  extends AbstractDao<CategoryEntity> {
 
     public CategoryEntity findCategoryById(long id) {
         try {
-            return (CategoryEntity) em.createNamedQuery("Category.findCategoryById").setParameter("idCategory", id)
+            return (CategoryEntity) em.createNamedQuery("Category.findCategoryById").setParameter("categoryId", id)
                     .getSingleResult();
 
         } catch (NoResultException e) {

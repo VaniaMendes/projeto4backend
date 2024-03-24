@@ -17,11 +17,11 @@ public class TaskDao extends AbstractDao<TaskEntity> {
 	public TaskDao() {
 		super(TaskEntity.class);
 	}
-	
+
 
 	public TaskEntity findTaskById(long id) {
 		try {
-			return (TaskEntity) em.createNamedQuery("Task.findTaskById").setParameter("id", id)
+			return (TaskEntity) em.createNamedQuery("Task.findTaskById").setParameter("idTask", id)
 					.getSingleResult();
 
 		} catch (NoResultException e) {
